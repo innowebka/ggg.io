@@ -1,0 +1,85 @@
+<center><a href="javascript:void(0)" class="button read-more" onclick="location.href='http:\\themepanda.com'">THEME LINK</a></center>
+
+  <link rel="dns-prefetch" href="" />
+  <link rel="dns-prefetch" href="" />
+  <link rel="dns-prefetch" href="" />
+  <link rel="dns-prefetch" href="" />
+  <link rel="dns-prefetch" href="" />
+  <link rel="dns-prefetch" href="" />
+
+  {% if site.instafeed == true %}
+  <div class="widget widget-instagram">
+    <h3 class="widget-title">Instagram</h3>
+    <div class="instagram-box">
+      <ul id="instafeed" class="instagram-grid list-reset clearfix"></ul>
+      <a class="instagram-prof" href="#">&#64;UserName</a>
+    </div>
+  </div>
+  {% endif %}
+  <!--from sidebar-->
+  
+<!--PGBAR-->
+<!-- Script used to generate --scroll variable with current scroll percentage value -->
+<script>
+var element = document.documentElement,
+  body = document.body,
+  scrollTop = 'scrollTop',
+  scrollHeight = 'scrollHeight',
+  progress = document.querySelector('.progress-bar'),
+  scroll;
+
+document.addEventListener('scroll', function() {
+  scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+  progress.style.setProperty('--scroll', scroll + '%');
+});
+</script>
+</div>
+<!--BGBAR-->
+
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "C" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "C" key
+      if (e.ctrlKey && e.keyCode == 67) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
